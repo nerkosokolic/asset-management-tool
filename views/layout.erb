@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BarberPole.io</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/reset.css">
+  <link rel='stylesheet' href='/stylesheets/main.css'>
+</head>
+<body>
+
+<% if logged_in?%>
+  <header class="banner-header">
+    <section class="header-left">
+      <h1>Barberpole.io</h1>
+    </section>
+    <section class="header-mid">
+      <h1>Navigation</h1>
+    </section>
+    <section class="header-right">
+        <a href="/my_assets">Business Unit Assets</a>
+        <form action="/sessions" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button class="btn btn-warning">Logout</button>
+        </form>
+    </section>
+  </header>
+  <% else %>
+    <%# <a href="/login">Login</a> %>
+  <% end %>
+  <%= yield %>
+
+</body>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
