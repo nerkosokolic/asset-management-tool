@@ -12,6 +12,28 @@ header {
 .banner-header {
     display: flex;
     justify-content: space-between;
+    background-color: rgb(232, 232, 232);
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+.table {
+    margin-bottom: 0;
+}
+
+
+.company-logo {
+    border: 4px solid rgb(139, 139, 139);
+    color: rgb(139, 139, 139);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 2rem;
+    margin: 5px 10px 5px 20px;
+    font-weight: bolder;
 }
 
 /* .form-label-group > input {

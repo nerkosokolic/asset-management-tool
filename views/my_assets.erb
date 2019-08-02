@@ -1,3 +1,30 @@
-<% @assets.each do |asset |%>
-    <%= asset.description %>
-<% end %>
+<table class='table table-striped table-dark table-hover'>
+    <thead>
+        <tr>
+            <th scope="col">Actions</th>
+            <th scope="col">Asset Description</th>
+            <th scope="col">Category</th>
+            <th scope="col">Fail Col</th>
+        </tr>
+    <thead>
+    <tbody>
+        <% @assets.each do |asset |%>
+        <tr>
+            <th>
+            <form action="/assets/<%= asset.id %>/edit" method="get">
+                <button type='submit' class="btn btn-outline-warning">Edit</button>
+            </form>
+            </th>
+            <th><%= asset.description %></th>
+            <th><%= asset.category %></th>
+            <th>
+            <% if asset.id % 2 == 0 %>
+                <%= "pass" %>
+            <% else %>
+                <%= "fail" %>
+            <% end %>
+            </th>
+        </tr>
+        <% end %>   
+    <tbody>
+</table>

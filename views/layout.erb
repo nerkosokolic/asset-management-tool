@@ -11,15 +11,15 @@
 <body>
 
 <% if logged_in?%>
-  <header class="banner-header">
-    <section class="header-left">
-      <h1>Barberpole.io</h1>
+  <header class="banner-header" id="myHeader">
+    <section class="header-left" id="myTableHeader">
+      <div class="company-logo">Company Logo</div>
     </section>
     <section class="header-mid">
-      <h1>Navigation</h1>
+      <div class="body-filters">Body Filters</div>
     </section>
     <section class="header-right">
-        <a href="/my_assets">Business Unit Assets</a>
+        <a href="/my_assets">View My Assets</a>
         <form action="/sessions" method="post">
         <input type="hidden" name="_method" value="delete">
         <button class="btn btn-warning">Logout</button>
@@ -33,4 +33,5 @@
 
 </body>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="javascripts/application.js"></script>
 </html>

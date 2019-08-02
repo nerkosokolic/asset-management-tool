@@ -6,7 +6,7 @@ get '/login' do
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
     session[:user_id] = user.id #its a hash - named session
-    redirect "/"
+    redirect "/my_assets"
     else 
       erb :login
     end
@@ -16,3 +16,8 @@ get '/login' do
     session[:user_id] = nil
     redirect '/login'
   end
+
+  get '/body' do
+    erb :body
+  end
+  

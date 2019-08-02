@@ -32,7 +32,7 @@ end
 
 get '/' do
   @assets = Asset.all
-  erb :index
+  erb :login
 end
 
 get '/my_assets' do
@@ -42,6 +42,7 @@ end
 
 require_relative 'routes/sessions'
 require_relative 'routes/registrations'
+require_relative 'routes/assets'
 
 
 
