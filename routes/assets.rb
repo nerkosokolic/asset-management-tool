@@ -4,7 +4,7 @@ get '/assets/new' do
   end
   
   post '/assets' do
-    asset = Dish.new
+    asset = Asset.new
     asset.title = params[:title]
     asset.image_url = params[:image_url]
     asset.user_id = current_user.id
@@ -14,8 +14,8 @@ get '/assets/new' do
   
   get '/assets/:id' do
     redirect '/login' unless session[:user_id]
-    @asset = Dish.find(params[:id])
-    @comments = Comment.where(asset_id: params[:id])
+    @asset = Asset.find(params[:id])
+    # @comments = Comment.where(asset_id: params[:id])
     erb :show
   end
   
@@ -28,15 +28,15 @@ get '/assets/new' do
   #update existing asset
   put '/assets/:id' do
     #grab existing asset
-    asset = Dish.find(params[:id])
-    asset.title = params[:title]
-    asset.image_url = params[:image_url]
+    asset = Asset.find(params[:id])
+    asset.description = params[:description]
+    asset.category = params[:category]
     asset.save
     redirect "/assets/#{params[:id]}"
   end
   
   delete '/assets/:id' do
-    asset = Dish.find(params[:id])
+    asset = Asset.find(params[:id])
     asset.destroy
-    redirect "/"
+    redirect "/my_assets"
   end

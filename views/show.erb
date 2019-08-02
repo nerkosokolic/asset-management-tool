@@ -1,0 +1,23 @@
+<h1>details</h1>
+
+<%= @asset.description %>
+
+<a href="/assets/<%= @asset.id %>/edit">edit asset</a>
+
+<%# get is read, post is create, put is update, delete is destroy %>
+<form actions="/assets/<% @asset.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+<button>delete</button>
+</form>
+
+<h2>Comments</h2>
+<% if  session[:user_id]%>
+<form action="/comments" method="post">
+<input type='hidden' name="asset_id" value="<%= @asset.id %>"></input>
+<textarea name="body"></textarea> 
+<button>post comment</button>
+</form>
+<% end %>
+
+
+

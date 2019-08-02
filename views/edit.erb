@@ -1,1 +1,12 @@
 works
+
+<h1>Edit Asset</h1>
+
+<form action="/assets/<%= @asset.id %>" method="post">
+  <input type="hidden" name="_method" value="put">
+  <label for="">Description</label>
+  <input type="text" name="description" value="<%= @asset.description %>">
+  <label for="">Category</label>
+  <input type="text" name="category" value="<%= @asset.category %>">
+  <button>update</button>
+</form>
