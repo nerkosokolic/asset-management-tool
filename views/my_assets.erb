@@ -9,8 +9,8 @@
         </tr>
     <thead>
     <tbody>
-        <% @assets.each do |asset |%>
-        <tr>
+        <% @assets.each do |asset| %>
+        <tr> 
             <th>
             <form action="/assets/<%= asset.id %>/edit" method="get">
                 <button type='submit' class="btn btn-outline-warning">Edit</button>

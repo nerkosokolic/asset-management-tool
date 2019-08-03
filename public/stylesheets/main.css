@@ -36,7 +36,13 @@ header {
     font-weight: bolder;
 }
 
-/* .form-label-group > input {
-    margin: 5px;
-} */
+.header-mid {
+    width: 30%;
+    padding-top: 15px;
+}
+
+
+.body-filters {
+    height: 60%;
+}
 
