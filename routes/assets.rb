@@ -15,6 +15,8 @@ get '/assets/new' do
   get '/assets/:id' do
     redirect '/login' unless session[:user_id]
     @asset = Asset.find(params[:id])
+    @maintenance = MaintenanceLog.where(asset_id: params[:id])
+    @utilisation = UtilisationLog.where(asset_id: params[:id])
     # @comments = Comment.where(asset_id: params[:id])
     erb :show
   end

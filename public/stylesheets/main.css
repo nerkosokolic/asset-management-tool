@@ -1,11 +1,13 @@
 body {
-    background-color: rgb(227, 227, 227);
+    background-color: #343A40;
     font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
 header {
     border-bottom: 2px solid black;
     padding: 5px;
+    background-color: rgb(227, 227, 227);
 
 }
 
@@ -46,3 +48,7 @@ header {
     height: 60%;
 }
 
+.main-buttons {
+    display: flex;
+    justify-content: row;
+}

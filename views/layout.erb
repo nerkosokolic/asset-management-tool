@@ -13,7 +13,7 @@
 <% if logged_in?%>
   <header class="banner-header" id="myHeader">
     <section class="header-left">
-      <div class="company-logo">Company Logo</div>
+      <div class="company-logo">Logo</div>
     </section>
     <section class="header-mid">
       <div class="body-filters">
@@ -21,6 +21,7 @@
       </div>
     </section>
     <section class="header-right">
+        logged in as: <%= current_user.email %>
         <a href="/my_assets">View My Assets</a>
         <form action="/sessions" method="post">
         <input type="hidden" name="_method" value="delete">

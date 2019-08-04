@@ -9,13 +9,16 @@ CREATE TABLE "assets" (
   "id" SERIAL PRIMARY KEY,
   "description" VARCHAR(300),
   "category" VARCHAR(300),
-  "bu_id" int
+  "bu_id" int,
+  "purchase_date" DATE,
+  "purchase_cost" INT,
+  "registration_expiry" DATE
 );
 
 CREATE TABLE "maintenance_logs" (
   "id" SERIAL PRIMARY KEY,
   "asset_id" int,
-  "maintenance_id" int,
+  "maintenance_type_id" int,
   "expense_value" int,
   "user_id" int,
   "date_time" timestamptz
@@ -34,7 +37,7 @@ CREATE TABLE "revenue_types" (
 CREATE TABLE "utilisation_logs" (
   "id" SERIAL PRIMARY KEY,
   "asset_id" int,
-  "revenue_id" int,
+  "revenue_type_id" int,
   "revenue_value" int,
   "user_id" int,
   "date_time" timestamptz

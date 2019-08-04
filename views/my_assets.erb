@@ -12,9 +12,14 @@
         <% @assets.each do |asset| %>
         <tr> 
             <th>
+            <div class="main-buttons">
+            <form action="/assets/<%= asset.id %>" method="get">
+                <button type='submit' class="btn btn-outline-success">Details</button>
+            </form>
             <form action="/assets/<%= asset.id %>/edit" method="get">
                 <button type='submit' class="btn btn-outline-warning">Edit</button>
             </form>
+            </div>
             </th>
             <th><%= asset.description %></th>
             <th><%= asset.category %></th>
