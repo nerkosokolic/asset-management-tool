@@ -1,13 +1,26 @@
-<h1>Login</h1>
+  <div class="container login-page">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+            <div class="card-body">
+                <h1>Login</h1>
 
-<form action="/sessions" method="post">
-<label for="">Email: </label>
-<input type="text" name="email">
-<label for="">Password: </label>
-<input type="password" name="password">
-<button class="btn btn-primary">Login</button>
-</form>
-<form action="/register" method="get">
-<button class="btn btn-secondary">Register</button>
-</form>
+                <form action="/sessions" method="post">
+                <label for="">Email: </label>
+                <input type="text" name="email">
+                <label for="">Password: </label>
+                <input type="password" name="password">
+
+                <button class="btn btn-primary login-button">Login</button>
+                </form>
+                <form action="/register" method="get" >
+                <button class="btn btn-secondary login-button">Register</button>
+                </form>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+</div>
 

@@ -43,6 +43,7 @@ end
 require_relative 'routes/sessions'
 require_relative 'routes/registrations'
 require_relative 'routes/assets'
+require_relative 'routes/works'
 
 
 

@@ -1,11 +1,14 @@
-<table class='table table-striped table-dark table-hover'>
+<div class='show-container'>
+<table class='table table-striped table-dark table-hover' id="myTable">
     <thead>
         <tr>
             <th scope="col font-weight-bold">Actions</th>
             <th scope="col font-weight-bold">Asset Description</th>
             <th scope="col font-weight-bold">Category</th>
-            <th scope="col font-weight-bold">Fail Col</th>
+            <th scope="col font-weight-bold">Purchase Cost</th>
+            <th scope="col font-weight-bold">Asset Age</th>
             <th scope="col font-weight-bold">Test</th>
+            <th scope="col font-weight-bold">Rego Current?</th>
         </tr>
     <thead>
     <tbody>
@@ -14,7 +17,7 @@
             <th>
             <div class="main-buttons">
             <form action="/assets/<%= asset.id %>" method="get">
-                <button type='submit' class="btn btn-outline-success">Details</button>
+                <button type='submit' class="btn btn-outline-primary">Details</button>
             </form>
             <form action="/assets/<%= asset.id %>/edit" method="get">
                 <button type='submit' class="btn btn-outline-warning">Edit</button>
@@ -23,20 +26,23 @@
             </th>
             <th><%= asset.description %></th>
             <th><%= asset.category %></th>
+            <th><%= asset.purchase_cost %></th>
+            <th><%= asset.purchase_date %></th>
             <th>
-            <% if asset.id % 2 == 0 %>
-                <%= "pass" %>
+            <% if asset.registration_expiry %>
+                <%= "OK" %>
             <% else %>
-                <%= "fail" %>
+                <%= "fail #{asset.registration_expiry}" %>
             <% end %>
             </th>
-            <% if asset.id % 2 == 0 %>
-                <%= "<th>first condition met</th>" %>
+            <% if asset.registration_expiry %>
+                <%= "<th>OK</th>" %>
             <% else %>
-                <%= "<th></th>" %>
+                <%= "<th class='text-danger'>issue - #{asset.registration_expiry}</th>" %>
             <% end %>
 
         </tr>
         <% end %>   
     <tbody>
 </table>
+</div>

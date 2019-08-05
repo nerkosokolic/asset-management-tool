@@ -1,15 +1,19 @@
 #only reads  not posts
 get '/assets/new' do
+    asset_category = Asset.select(:category).distinct
     erb :new
   end
   
   post '/assets' do
     asset = Asset.new
-    asset.title = params[:title]
-    asset.image_url = params[:image_url]
-    asset.user_id = current_user.id
+    asset.description = params[:description]
+    asset.category = params[:category]
+    asset.bu_id = current_user.bu_id
+    asset.purchase_date = params[:purchase_date]
+    asset.purchase_cost = params[:purchase_cost]
+    asset.registration_expiry = params[:rego_expiry]
     asset.save
-    redirect '/'
+    redirect '/my_assets'
   end
   
   get '/assets/:id' do

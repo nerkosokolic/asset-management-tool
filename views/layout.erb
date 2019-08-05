@@ -13,15 +13,16 @@
 <% if logged_in?%>
   <header class="banner-header" id="myHeader">
     <section class="header-left">
-      <div class="company-logo">Logo</div>
+      <div class="company-logo">Construction Co</div>
     </section>
     <section class="header-mid">
       <div class="body-filters">
-        <input type="text" name="" id="">
+        <form action="assets/new" id="createNew" method='get'><button class="btn btn-primary">Create New Asset</button></form>
+        <input placeholder="Seach" type="text" id="myInput" onkeyup="searchFunction()">
       </div>
     </section>
     <section class="header-right">
-        logged in as: <%= current_user.email %>
+        <p>Logged in as: <%= current_user.email %></p>
         <a href="/my_assets">View My Assets</a>
         <form action="/sessions" method="post">
         <input type="hidden" name="_method" value="delete">

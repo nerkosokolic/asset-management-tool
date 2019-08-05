@@ -13,6 +13,7 @@ header {
 
 .banner-header {
     display: flex;
+    height: 100px;
     justify-content: space-between;
     background-color: rgb(232, 232, 232);
 }
@@ -39,16 +40,102 @@ header {
 }
 
 .header-mid {
-    width: 30%;
-    padding-top: 15px;
+    width: 40%;
+    height: 100%;
 }
 
 
 .body-filters {
-    height: 60%;
+    height: 100%;
+    margin-top: 15px;
+    display: flex;
 }
 
+.body-filters button {
+    margin-right: 5px;
+}
+
+.body-filters input {
+    width: 100%;
+}
+
+
+
 .main-buttons {
+    display: flex;
+    justify-content: row;
+}
+
+.main-buttons button {
+    margin-right: 5px;
+}
+
+.header-right {
+    display: block;
+    color: black;
+    text-align: right;  
+}
+
+.text-danger {
+    color: red;
+}
+
+.card-body {
+    color: black;
+}
+
+#createNew {
+    height: 80%;
+}
+
+#createNew button {
+    height: 80%;
+}
+
+#myInput {
+    font-size: 25px;
+    height: 68%;
+    padding: 20px;
+}
+
+.top-details {
+    display: flex;
+    justify-content: space-between
+}
+
+.right-details {
+    display: flex;
+}
+
+.right-details form {
+    margin-right: 5px;
+}
+
+.stats {
+    margin-bottom: 10px;
+}
+
+.show-container {   
+    width: 60%;
+    margin: 0 auto;
+}
+
+.asset-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5px; 
+}
+
+.asset-inputs-block {
+    display: block;
+
+}
+
+.asset-inputs input, select {
+    margin-right: 5px;
+}
+
+.maintenance-input {
     display: flex;
     justify-content: row;
 }
