@@ -1,4 +1,4 @@
-require 'pry'
+# require 'pry'
 require_relative 'database_config'
 require_relative 'models/user'
 require_relative 'models/business_unit'
@@ -9,4 +9,4 @@ require_relative 'models/utilisation_log'
 require_relative 'models/revenue_type'
 
 
-binding.pry
+# binding.pry
