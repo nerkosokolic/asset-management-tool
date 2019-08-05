@@ -1,3 +1,5 @@
+Demo - https://barberpole.herokuapp.com/
+
 # Asset Management Tool
 
 A CRUD application that allows for visibility of asset maintenance and utilisation.
