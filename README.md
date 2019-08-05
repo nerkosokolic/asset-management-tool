@@ -12,9 +12,16 @@ To have a simple tool that will assist in providing visibility to a businesses a
 
 ## Built With
 
-* Ruby - an interpreted, high-level, general-purpose programming language.
+* Ruby - An interpreted, high-level, general-purpose programming language.
 * Bootstrap - CSS framework directed at responsive, mobile-first front-end web development.
-* Postgres - relational database management system.
+* Postgres - Relational database management system.
+
+## To Do List
+
+1. Add user triggers and notifications for specific measurements
+2. Add benchmark life targets to assets
+3. Add tier heirarchy
+
 
 ## Acknowledgments
 
